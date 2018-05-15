@@ -1,1 +1,7 @@
-This is your Chrome extension which replaces a word or phrase with a different word or phrase. 
+Make the internet awesome again by bringing italics and bold to sites that don't normall support it
+
+I'm looking _directly_ at you, twitter.
+
+Jerk.
+
+![it do dis](./awesome.gif)
