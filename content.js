@@ -16,6 +16,8 @@ debounce = function(func, wait, immediate) {
   }
 }
 
+const emoji = new EmojiConvertor()
+
 const action = function() {
   var elements = document.getElementsByTagName('p')
 
@@ -38,6 +40,7 @@ const action = function() {
         })
 
         const span = document.createElement('span')
+        replacedText = emoji.replace_colons(replacedText)
         span.innerHTML = replacedText
 
         if (replacedText !== text) {

@@ -6,7 +6,7 @@
   "content_scripts": [
     {
       "matches": ["*://*/*"],
-      "js": ["content.js"],
+      "js": ["emoji.min.js", "content.js"],
       "run_at": "document_end"
     }
   ]
