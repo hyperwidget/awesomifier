@@ -18,6 +18,12 @@ debounce = function(func, wait, immediate) {
 
 const emoji = new EmojiConvertor()
 
+const backtickStyle = `padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27,31,35,0.05);
+  border-radius: 3px; `
+
 const action = function() {
   var elements = document.getElementsByTagName('p')
 
@@ -36,6 +42,28 @@ const action = function() {
         replacedText = replacedText.replace(/\*.*?\*/gi, function(m) {
           return (
             '<span style="font-weight:bold">' + m.replace(/\*/g, '') + '</span>'
+          )
+        })
+
+        replacedText = replacedText.replace(/\~.*?\~/gi, function(m) {
+          return (
+            '<span style="text-decoration:line-through">' +
+            m.replace(/\~/g, '') +
+            '</span>'
+          )
+        })
+
+        replacedText = replacedText.replace(/```[\w\W\s]*?```/gi, function(m) {
+          return (
+            `<code style="${backtickStyle}">` +
+            m.replace(/```/g, '') +
+            '</code>'
+          )
+        })
+
+        replacedText = replacedText.replace(/\`.*?\`/gi, function(m) {
+          return (
+            `<code style="${backtickStyle}">` + m.replace(/\`/g, '') + '</code>'
           )
         })
 
