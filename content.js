@@ -30,8 +30,6 @@ const action = function() {
 
   var elements = [...pElements, ...spanElements];
 
-  console.log(elements);
-
   for (var i = 0; i < elements.length; i++) {
     var element = elements[i];
 
